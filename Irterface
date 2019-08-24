@@ -1,0 +1,327 @@
+from tkinter import*
+import random
+import time
+import datetime
+
+root = Tk()
+root.geometry("1350x750+0+0")
+root.title("SISTEMA DE VENDAS")
+root.configure(background='darkblue')
+#========================FRAME DO PRIMARIO=======================#
+
+Tops = Frame (root, width=1350 , height=100 , bd=9 , relief ="raise")
+Tops.pack(side=TOP)
+
+
+framef1 = Frame (root, width=900 , height=650 , bd=8 , relief ="raise")
+framef1.pack(side=LEFT)
+
+
+framef2 = Frame (root, width=440 , height=650 , bd=8 , relief ="raise")
+framef2.pack(side=RIGHT)
+
+#=============================================================================================
+#========================FRAMESSECUNDARIOS================================================
+
+frameft2 = Frame (framef2, width=440 , height=450 , bd=2 , relief ="raise")
+frameft2.pack(side=TOP)
+
+framefb2 = Frame (framef2, width=440 , height=250 , bd=2 , relief ="raise")
+framefb2.pack(side=BOTTOM)
+
+framef1a = Frame (framef1, width=900 , height=330 , bd=2 , relief ="raise")
+framef1a.pack(side=TOP)
+
+framef2a = Frame (framef1, width=900 , height=320 , bd=2 , relief ="raise")
+framef2a.pack(side=BOTTOM)
+
+framef1aa = Frame (framef1a, width=450 , height=330 , bd=2 , relief ="raise")
+framef1aa.pack(side=LEFT)
+
+framef1ab = Frame (framef1a, width=450 , height=330 , bd=2 , relief ="raise")
+framef1ab.pack(side=RIGHT)
+
+
+#############################FRAMES DO RODAPÉ############################################################################################
+framef2aa= Frame (framef2a, width=450 , height=800 , bd=2 , relief ="raise")
+framef2aa.pack(side=LEFT)
+
+framef2ab= Frame (framef2a, width=450 , height=800 , bd=2 , relief ="raise")
+framef2ab.pack(side=RIGHT)
+
+frameRODAPE= Frame (framef2a, width=211 , height=190 , bd=0 , relief ="raise")
+frameRODAPE.pack(side=BOTTOM)
+
+
+#======================== TROCA DA COR DO FUNDO DO FRAME DA ESQUERDA #========================
+
+framef1.configure(background='gray')
+
+#======================== RÓTULOS DO CABEÇ[ARIO COM TITULO #========================
+
+lblInfo= Label(Tops,font=('arial',50, 'bold'),text="ENGCICLA COMP.®",bd=8 ,width=23)
+lblInfo.grid(row=0,column=0)
+
+###########################BOTAO metodos################################################################################
+###BTAO SAIR######
+def iExit():
+    root.destroy()
+    return
+########BOTAO LIMPAR######
+
+
+
+
+
+
+#======================== DECLARÇÃP DE VARIAVEIS #========================
+C_Latte =StringVar()
+C_Expresso =StringVar()
+C_icedLatte =StringVar()
+C_Cafe_Cortado =StringVar()
+Cafe_leite =StringVar()
+C_preto =StringVar()
+Cappucino =StringVar()
+C_creme =StringVar()
+############################################### Bolos ##########################################################################
+B_cenoura =StringVar()
+B_milho =StringVar()
+Bolo_cafe =StringVar()
+B_banana =StringVar()
+B_morango =StringVar()
+B_limao =StringVar()
+B_chocolate =StringVar()
+B_Torta =StringVar()
+
+#########################################################################################################################
+var1= IntVar()
+var2= IntVar()
+var3= IntVar()
+var4= IntVar()
+var5= IntVar()
+var6= IntVar()
+var7= IntVar()
+var8= IntVar()
+var9= IntVar()
+var10= IntVar()
+var11= IntVar()
+var12= IntVar()
+var13= IntVar()
+var14= IntVar()
+var15= IntVar()
+var16= IntVar()
+var17= IntVar()
+
+#========================SETANDO VARIAVEL=======================#========================
+
+C_Latte.set("0")
+C_Expresso.set("0")
+C_icedLatte.set("0")
+C_Cafe_Cortado.set("0")
+Cafe_leite.set("0")
+C_preto.set("0")
+Cappucino.set("0")
+C_creme.set("0")
+
+###################################### BOLOS ####################################################################################
+B_cenoura.set("0")
+B_milho.set("0")
+Bolo_cafe.set("0")
+B_banana.set("0")
+B_morango.set("0")
+B_limao.set("0")
+B_chocolate.set("0")
+B_Torta.set("0")
+
+########################################################################################################################
+var1.set("0")
+var2.set("0")
+var3.set("0")
+var4.set("0")
+var5.set("0")
+var6.set("0")
+var7.set("0")
+var8.set("0")
+var9.set("0")
+var10.set("0")
+var11.set("0")
+var12.set("0")
+var13.set("0")
+var14.set("0")
+var15.set("0")
+var16.set("0")
+var17.set("0")
+
+##========================CRIANDOS BOTOES CAFÈ========================================================================
+
+Latta= Checkbutton(framef1aa,text="Latta \t", variable = var1,onvalue =1 , offvalue=0,width=13,
+                   font=('arial',18,'bold')).grid(row = 0,sticky=W)
+
+Expresso = Checkbutton(framef1aa,text="Café Expresso \t", variable = var2,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 1,sticky=W)
+
+iced_Latte = Checkbutton(framef1aa,text="Iced Latte \t", variable = var3,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 2,sticky=W)
+
+Cafe_Cortado = Checkbutton(framef1aa,text="Café Cortado \t", variable = var4,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 3,sticky=W)
+
+Cafe_Leite = Checkbutton(framef1aa,text="Café com Leite \t", variable = var5,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 4,sticky=W)
+
+Cafe_Preto = Checkbutton(framef1aa,text="Café_Preto \t", variable = var6,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 5,sticky=W)
+
+Cafe_Creme = Checkbutton(framef1aa,text="Café com Creme \t", variable = var7,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 6,sticky=W)
+
+Cappuccino = Checkbutton(framef1aa,text="Cappuccino \t", variable = var8,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 7,sticky=W)
+
+
+#========================== BOTÃO DOS BOLOS ===============================================================
+
+Bolo_Cafe = Checkbutton(framef1ab,text="Bolo Cafe \t", variable = var10,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 0,sticky=W)
+
+Bolo_de_Cenoura = Checkbutton(framef1ab,text="Bolo de Cenourra \t", variable = var11,onvalue =1 , offvalue=0,width=27,
+                   font=('arial',18,'bold')).grid(row = 1,sticky=W)
+
+Bolo_de_Milho = Checkbutton(framef1ab,text="Bolo de Milho \t", variable = var12,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 2,sticky=W)
+
+Bolo_de_Banana = Checkbutton(framef1ab,text="Bolo de Banana \t", variable = var13,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 3,sticky=W)
+
+Bolo_de_Morango = Checkbutton(framef1ab,text="Bolo de Morango  \t", variable = var14,onvalue =1 , offvalue=0,width=27,
+                   font=('arial',18,'bold')).grid(row = 4,sticky=W)
+
+Bolo_de_Limao = Checkbutton(framef1ab,text="Bolo de Limão  \t", variable = var15,onvalue =1 , offvalue=0,width=20,
+                   font=('arial',18,'bold')).grid(row = 5,sticky=W)
+
+Bolo_de_Chocolate = Checkbutton(framef1ab,text="Bolo de Chocolate \t", variable = var16,onvalue =1 , offvalue=0,width=27,
+                   font=('arial',18,'bold')).grid(row = 6,sticky=W)
+
+Torta = Checkbutton(framef1ab,text="Torta \t", variable = var17,onvalue =1 , offvalue=0,width=13,
+                   font=('arial',18,'bold')).grid(row = 7,sticky=W)
+
+
+#===========================CRIANDO CAMPOSD E TEXTO CAFE===========================
+
+
+txtLatte=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=Cafe_leite ,state=NORMAL)
+txtLatte.grid(row=0,column=1)
+
+txtExpresso=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left',textvariable=C_Expresso, state=NORMAL)
+txtExpresso.grid(row=1,column=1)
+
+txtIcedlatte=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=C_icedLatte,state=NORMAL)
+txtIcedlatte.grid(row=2,column=1)
+
+txtCafecortado=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=C_Cafe_Cortado,state=NORMAL)
+txtCafecortado.grid(row=3,column=1)
+
+txtCafeleite=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=Cafe_leite,state=NORMAL)
+txtCafeleite.grid(row=4,column=1)
+
+txtCafepreto=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=C_preto,state=NORMAL)
+txtCafepreto.grid(row=5,column=1)
+
+txtCafecreme=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=C_creme,state=NORMAL)
+txtCafecreme.grid(row=6,column=1)
+
+txtCappucino=Entry (framef1aa,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=Cappucino,state=NORMAL)
+txtCappucino.grid(row=7,column=1)
+
+#============================CAMPO DE TEXTO BOLOS===============================================
+
+txtBolocafe=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=Bolo_cafe,state=NORMAL)
+txtBolocafe.grid(row=0,column=1)
+
+txtBolocenoura=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left',textvariable=B_cenoura,state=NORMAL)
+txtBolocenoura.grid(row=1,column=1)
+
+txtBolomilho=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=B_milho,state=NORMAL)
+txtBolomilho.grid(row=2,column=1)
+
+txtBolobanana=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=B_banana,state=NORMAL)
+txtBolobanana.grid(row=3,column=1)
+
+txtBolomorango=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=B_morango,state=NORMAL)
+txtBolomorango.grid(row=4,column=1)
+
+txtBololimao=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=B_limao,state=NORMAL)
+txtBololimao.grid(row=5,column=1)
+
+txtBolochocolate=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left', textvariable=B_chocolate, state=NORMAL)
+txtBolochocolate.grid(row=6,column=1)
+
+txtTorta=Entry (framef1ab,font=('arial',16,'bold'),bd=2,width=8,justify='left',textvariable=B_Torta,state=NORMAL)
+txtTorta.grid(row=7,column=1)
+
+#=======================RECIBOS==============================
+
+lblRecibo = Label(frameft2, font=('arial',12,'bold'),text="Recibo do Cliente : ",bd=2, anchor='w')
+lblRecibo.grid(row=0,column=0,sticky=W)
+
+txtrecibo=Text(frameft2, width=58 , height=28, bg="white",bd=8,font=('arial',12,))
+txtrecibo.grid(row=1,column=0)
+
+##################################BOTÕES RECIBO########################################################
+
+cmdTotal=Button(framefb2,padx=16,pady=1 ,bd=4, fg='darkblue', font=('arial', 16 , 'bold') ,
+                                        width=5, text="Total").grid(row=0,column=0)
+
+cmdRecibo=Button(framefb2,padx=16,pady=1 ,bd=4, fg='black', font=('arial', 16 , 'bold') ,
+                                        width=5, text="Recibo").grid(row=0,column=1)
+
+cmdLimpar=Button(framefb2,padx=16,pady=1 ,bd=4, fg='black', font=('arial', 16 , 'bold') ,
+                                        width=5, text="Limpar").grid(row=0,column=2)
+
+cmdSair=Button(framefb2,padx=16,pady=1 ,bd=4, fg='red', font=('arial', 16 , 'bold') ,
+                                        width=5, text="Sair", command=iExit).grid(row=0,column=3)
+
+##################################################################################################################
+###########################################BOTOES RODAPÉ #####################################################################
+
+lblCustobebidas = Label(framef2aa, font=('arial',12,'bold'),text="Custo das Bebidas : ",bd=2,)
+lblCustobebidas.grid(row=0,column=0,sticky=W)
+
+txtCustobebidas=Entry(framef2aa, font=('arial',16,'bold'),bd=1, justify='left')
+txtCustobebidas.grid(row=0,column=1)
+
+lblCustobolos = Label(framef2aa, font=('arial',12,'bold'),text="Custo das Bolos : ",bd=2,)
+lblCustobolos.grid(row=1,column=0,sticky=W)
+
+txtCustobolos=Entry(framef2aa, font=('arial',16,'bold'),bd=1, justify='left')
+txtCustobolos.grid(row=1,column=1)
+
+lblTaxaservico = Label(framef2aa, font=('arial',12,'bold'),text="Taxa de Serviços  : ",bd=2,)
+lblTaxaservico.grid(row=2,column=0,sticky=W)
+
+txtTaxadeServiço=Entry(framef2aa, font=('arial',16,'bold'),bd=1, justify='left')
+txtTaxadeServiço.grid(row=2,column=1)
+
+######################################################################################################################################
+
+lblImposto = Label(framef2ab, font=('arial',12,'bold'),text="Custo dos Impostos : ",bd=2,)
+lblImposto.grid(row=0,column=0,sticky=W)
+
+txtImpostos=Entry(framef2ab, font=('arial',16,'bold'),bd=1, justify='left')
+txtImpostos.grid(row=0,column=1)
+
+lblSubtotal = Label(framef2ab, font=('arial',12,'bold'),text="Sub Total: ",bd=2,)
+lblSubtotal.grid(row=1,column=0,sticky=W)
+
+txtSubtotal=Entry(framef2ab, font=('arial',16,'bold'),bd=1, justify='left')
+txtSubtotal.grid(row=1,column=1)
+
+lblTotalcompra = Label(framef2ab, font=('arial',12,'bold'),text="Tota da Compra : ",bd=2,)
+lblTotalcompra.grid(row=2,column=0,sticky=W)
+
+txtTotaldaCompra=Entry(framef2ab, font=('arial',16,'bold'),bd=1, justify='left')
+txtTotaldaCompra.grid(row=2,column=1)
+
+
+
+root.mainloop()
