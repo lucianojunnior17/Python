@@ -1,3 +1,2 @@
-Curso em Vídeo 
-Curso de Python
+Curso em Vídeo de Python
 Gustavo Guanabara
