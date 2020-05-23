@@ -1,6 +1,4 @@
-print('\033[31m=\033[m'*300)
-print('\033[30m PROGRAMA DE LUCIANO JUNIOR\033[m')
-print('\033[31m=\033[m'*300)
+############# PROGRAMA MÉDIA ESAMC #################################
 print('Olá esse programa vai ajudar voçê a calcular a sua nota nas Provas')
 materia = (input('Digite o Nome da Matéria : ')).capitalize()
 pesotrab = str(input('Sua Matéria tem algum trabalho que vale nota ? [S] ou [N] : ')).upper()
@@ -22,3 +20,5 @@ if media >= 7:
     print('Aprovado ')
 else:
     print('Reprovado')
+    
+    
