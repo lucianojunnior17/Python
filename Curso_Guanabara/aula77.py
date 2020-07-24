@@ -1,4 +1,4 @@
-#########Exercício 77 Curso de Python###########
+#########Exercício 77 Curso de Python##########
 ##########CONTADOR DE VOGAIS##############################
 palavras = ('Aprender ', 'programar', 'Computacao', 'Python','curso',
 'gratis', 'engenheiro', 'programador')
