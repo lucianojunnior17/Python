@@ -26,3 +26,4 @@ print(f'O menor valor digitado foi {men} na posição ', end='')
 for i, v in enumerate(listaum):
     if v == men:
         print(f'{i}.....')
+
