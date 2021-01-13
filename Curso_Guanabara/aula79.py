@@ -17,3 +17,4 @@ while True:
 print('=='*30)
 numero.sort()
 print(f'Você digitou os valores {numero}')
+print('=='*30)
